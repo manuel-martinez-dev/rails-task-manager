@@ -1,9 +1,10 @@
 <h1>DAH Tasks!!</h1>
 <ol>
 <% @tasks.each do |task| %>
-<li><%= task.completed ? "☑" : "☐" %> <%= task.title %></li>
+<li><input type="checkbox">  <%= link_to task.title, task_path(task)%></li>
 
 <% end %>
 
 </ol>
 
+<p><%= link_to 'Wanna add a task', 'tasks/new' %></p>

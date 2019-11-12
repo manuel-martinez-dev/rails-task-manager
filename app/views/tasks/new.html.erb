@@ -1,0 +1,10 @@
+<h1>ADD Task</h1>
+
+<%= form_with model: @task do |task| %>
+    <%= task.label :title %>
+    <%= task.text_field :title, placeholder: "title" %>
+    <%= task.label :details %>
+    <%= task.text_field :details, placeholder: "details" %>
+    <%= task.submit %>
+<% end %>
+<p><%= link_to "Tasks", tasks_path %></p>
