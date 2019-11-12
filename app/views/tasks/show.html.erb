@@ -1,4 +1,6 @@
-<%= @task.title %>
-<h2><%= @task.details %></h2>
-
-<%= link_to 'Back to list', '/tasks' %>
+<div class="conatiner-fluid">
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+</div>
+  <%= link_to 'Edit a task?', edit_path, class: 'btn btn-primary' %>
+  <%= link_to 'Back to list', '/tasks', class: 'btn btn-secondary' %>

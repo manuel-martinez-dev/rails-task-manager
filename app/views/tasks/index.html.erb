@@ -1,10 +1,11 @@
 <h1>DAH Tasks!!</h1>
-<ol>
-<% @tasks.each do |task| %>
-<li><input type="checkbox">  <%= link_to task.title, task_path(task)%></li>
-
-<% end %>
-
-</ol>
-
+<div class="container-fluid">
+  <div class="form-check">
+  <ol>
+    <% @tasks.each do |task| %>
+    <li><input type="checkbox" class="form-check-input">  <%= link_to task.title, task_path(task)%></li>
+    <% end %>
+  </ol>
+  </div>
+</div>
 <p><%= link_to 'Wanna add a task', 'tasks/new' %></p>
