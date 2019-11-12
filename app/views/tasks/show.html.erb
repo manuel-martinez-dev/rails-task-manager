@@ -1,6 +1,7 @@
 <div class="conatiner-fluid">
   <h2><%= @task.title %></h2>
   <p><%= @task.details %></p>
+  <p><%= link_to "Delete", destroy_path(@task), method: :delete %></p>
 </div>
   <%= link_to 'Edit a task?', edit_path, class: 'btn btn-primary' %>
   <%= link_to 'Back to list', '/tasks', class: 'btn btn-secondary' %>
